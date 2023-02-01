@@ -1,9 +1,4 @@
-test
-test1
-test12
-test12333
-abcdela :Ddelaa delamogoce zdej
-se zmeri ne
-zdej pa
 oooo ja
-break line
+dela
+enajsta
+Is working
