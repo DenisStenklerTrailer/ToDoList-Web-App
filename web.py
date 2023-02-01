@@ -3,6 +3,11 @@ import functions
 
 todos = functions.ReadingTodos()
 
+def add_todo():
+    todo = st.session_state["new_todo"]
+    todos.append(todo + "\n")
+    functions.WritingTodos(todos)
+
 st.title("My Todo App")
 st.subheader("This is my todo app")
 st.write("This app is cool")
@@ -10,4 +15,7 @@ st.write("This app is cool")
 for todo in todos:
     st.checkbox(todo)
 
-st.text_input(label="",placeholder="Enter a todo here...")
+st.text_input(label="",placeholder="Enter a todo here...",
+              on_change=add_todo, key="new_todo")
+
+st.session_state
